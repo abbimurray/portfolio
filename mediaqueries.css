@@ -1,0 +1,11 @@
+/*when screen size is less than 1200 pixels, 
+the desktop navbar will disappear and the hamburger nav will appear*/
+
+@media screen and (max-width: 1200px) {
+ #desktop-nav{
+    display: none;
+ }
+    #hamburger-nav{
+        display:flex;
+    }
+}
