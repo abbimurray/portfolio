@@ -486,8 +486,9 @@ article .icon{
 }
 
 .project-btn{
-    color:black;
+    color:white;
     border-color:rgb(163,163,163);
+    margin-bottom: 20px; 
 }
 
 /*CONTACT */
@@ -562,6 +563,3 @@ footer p {
     
 }
 
-.btn.btn-colour-2.project-btn {
-    margin-bottom: 10px; /* Adjust as needed */
-}
