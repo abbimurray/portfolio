@@ -548,3 +548,20 @@ footer p {
 .nav-links li {
     margin-right: 20px;
 }
+
+.details-container.color-container {
+    border: 1px solid black;
+    border-radius:10px;
+    margin-bottom: 10px;
+}
+
+.image-project{
+    margin-top: 10px;
+    width:400px;
+    height:300px;
+    
+}
+
+.btn.btn-colour-2.project-btn {
+    margin-bottom: 10px; /* Adjust as needed */
+}
