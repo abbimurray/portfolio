@@ -444,21 +444,22 @@ section {
     max-width:70%;
     margin:auto;
 }
+
+/*CONTAINER HOLDING ALL THE SKILLS */
 .article-container{
     display:flex;
     text-align:initial;
     flex-wrap: wrap;
     flex-direction: row;
-    gap:1.0rem;
-    justify-content: space-betweeen;
+    justify-content: space-between;/*equal space between each article*/
 }
 
-/*THE */
+/*THE INDIVIDUAL SKILL(ICON,TITLE,DESCRIPTION OF SKILL)*/
 article{
     display:flex;
-    width:calc(33.33% - 2.5rem );
-    justify-content: space-around;
-    gap:0.25rem;
+    width:calc(25% - 2.5rem );
+    justify-content: space-around;/*Space around each child element ie icon,description,title*/
+    gap:0.25rem;/*space between each child element*/
     margin-bottom: 2rem;
 }
 
@@ -567,4 +568,3 @@ footer p {
     height:300px;
     
 }
-
