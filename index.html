@@ -95,7 +95,7 @@
             </div>
         </div>
     </div>
-    <img src="./assets/arrow.png" alt="Arrow which takes user to next section" class="icon arrow" onclick="location.href='#experience'"/>
+    <img src="./assets/arrow.png" alt="Arrow which takes user to next section" class="icon arrow" onclick="location.href='#skills'"/>
 </section>
 <!--SKILLS SECTION-->
     <section id="skills">
@@ -179,72 +179,54 @@
         onclick="location.href='#projects'"
     />        
     </section>
+
     <!--PROJECTS SECTION-->
-    <section id="projects">
+<section id="projects">
+    <div class="projects-intro">
         <p class="section__text__p1">Explore My Recent</p>
         <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-        <div class="about-containers">
-            <!--project one-->
-            <div class="details-container color-container">
-                <div class="article-container projectImg">
-                    <img src="./assets/ev_project.png" class="image-project" alt="project 1" class="project-img"/>
-                </div>
-                <h2 class="experience-sub-title project-title">EV Charging Application<br> - JAVA</h2>
-                <div class="btn-container">
-                    <button
-                        class="btn btn-colour-1 project-btn"
-                        onclick="location.href='https://github.com/abbimurray/project'"
-                    >Github
-                    </button>
-                    <button
-                        class="btn btn-colour-1 project-btn"
-                        onclick="location.href='https://setuo365-my.sharepoint.com/:v:/g/personal/c00260073_setu_ie/EbukI3RrN7RKu4ZLcQPfDlQB-D7_YqZ7YP1MHmzhtCd-EQ?e=yTz41i&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D'"
-                    >Live Demo
-                    </button>
-                </div>
-            </div>
-            <!--project two-->
-            <div class="details-container color-container">
-                <div class="article-container projectImg">
-                    <img src="./assets/web.png" class="image-project" alt="Car Rental Management System Project" class="project-img"/>
-                </div>
-                <h2 class="experience-sub-title project-title">Car Rental Management<br>System</h2>
-                <div class="btn-container">
-            
-                    <button
-                        class="btn btn-colour-1 project-btn"
-                        onclick="window.open('./assets/CarRentalSystem_ProjectManual.pdf')"
-                    >Documentation
-                    </button>
-                </div>
-            </div>
-            <!--prject three-->
-            <div class="details-container color-container">
-                <div class="article-container projectImg">
-                    <img src="./assets/walking_tour.png" class="image-project" alt="Data Structures Project" class="project-img"/>
-                </div>
-                <h2 class="experience-sub-title project-title">Data Structures and<br> Algorithms Project</h2>
-                <div class="btn-container">
-                    <button
-                        class="btn btn-colour-1 project-btn"
-                        onclick="window.open('./assets/RyanAbigailCode.pdf')"
-                    >Code
-                    </button>
-                    <button
-                        class="btn btn-colour-1 project-btn"
-                        onclick="window.open('./assets/RyanAbigailReport.pdf')"
-                    >Documentation
-                    </button>
-                </div>
-            </div>
-            </div>
+    </div>
+
+    <div class="projects-grid">
+        <!--project one-->
+        <div class="project">
+            <img src="./assets/ev_project.png" alt="project 1" class="project-img"/>
+            <h2 class="project-title">EV Charging Application - JAVA</h2>
+            <button class="btn btn-colour-1 project-btn" onclick="location.href='https://github.com/abbimurray/project'">Github</button>
+    
+            <button class="btn btn-colour-1 project-btn" onclick="location.href='https://setuo365-my.sharepoint.com/:v:/g/personal/c00260073_setu_ie/EbukI3RrN7RKu4ZLcQPfDlQB-D7_YqZ7YP1MHmzhtCd-EQ?e=yTz41i&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D'"
+                >Live Demo
+            </button>
         </div>
-        <img 
-        src="./assets/arrow.png" alt="Arrow Icon" class="icon arrow"
-        onclick="location.href='#projects'"
-    />       
-    </section>
+
+        <!--project two-->
+        <div class="project">
+            <img src="./assets/web.png" alt="Car Rental Management System Project" class="project-img"/>
+            <h2 class="project-title">Car Rental Management System</h2>
+            <button class="btn btn-colour-1 project-btn" onclick="window.open('./assets/CarRentalSystem_ProjectManual.pdf')">Documentation</button>
+        </div>
+
+        <!--project three-->
+        <div class="project">
+            <img src="./assets/walking_tour.png" alt="Data Structures Project" class="project-img"/>
+            <h2 class="project-title">Data Structures and Algorithms Project</h2>
+            <button class="btn btn-colour-1 project-btn" onclick="window.open('./assets/RyanAbigailCode.pdf')">Code</button>
+            <button
+                class="btn btn-colour-1 project-btn"
+                onclick="window.open('./assets/RyanAbigailReport.pdf')"
+            >Documentation
+            </button>
+        </div>
+
+        <!--project four-->
+        <div class="project">
+            <img src="./assets/assembly.jpg" alt="Assembly Project" class="project-img"/>
+            <h2 class="project-title">Assembly Project</h2>
+            <button class="btn btn-colour-1 project-btn" onclick="window.open('./assets/assemblyvideo.mp4')">Demo</button>
+        </div>
+    </div>
+</section>
+
     <!--CONTACT SECTION-->
     <section id="contact">
         <!--<p class="section__text__p1">Get In Touch</p>-->
