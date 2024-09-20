@@ -1,28 +1,27 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio_Abigail</title>
+    <title>Portfolio_AM</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
 <body>
     <nav id="desktop-nav">
-        <div class="logo">Abigail Murray</div>
+        <div class="logo">Abbi M</div>
         <div>
             <ul class="navbar-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
     <nav id="hamburger-nav">
-        <div class="logo">Abigail Murray</div>
+        <div class="logo">Abbi M</div>
         <div class="hamburger-menu">
             <div class="hamburger-icon" onclick="toggleMenu()">
                 <span></span>
@@ -31,6 +30,7 @@
             </div>
             <div class="menu-links">
                 <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
                 <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
                 <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
             </div>
@@ -38,11 +38,11 @@
     </nav>
     <section id="profile">
         <div class="section__pic-container">
-            <img src="./assets/profile-pic.jpg" alt="Profile Picture" class="section__pic">
+            <img src="./assets/avatar.jpg" alt="Bitmoji Profile Picture" class="section__pic">
         </div>
         <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Abigail</h1>
+        <h1 class="title">Abbi</h1>
         <p class="section__text__p2">Software Development Student</p>
         <div class="btn-container">
             <button
@@ -77,9 +77,10 @@
                     <img src="./assets/experience.png" alt="Experience Icon" class="icon">
                     <h3>Experience</h3>
                     <ul>
-                        <li>Completed the Sunlife Horizon Programme from January to May 2024, meeting with my mentor monthly to gain valuable industry insights and participate in job shadowing opportunities.</li>
-                        <li>Volunteered at the SETU Waterford Women in Technology event in 2024, where I displayed my assembly game and spoke to secondary students about the courses on offer at SETU.</li>
+                        <li>Working in Kildare County Council as a Summer Student within the IT Department.</li>
                         <li>Attended the UNUM Summer Intern Taster Program June 2024, where I also had the opportunity to participate in job shadowing.</li>
+                        <li>Volunteered at the SETU Waterford Women in Technology event in 2024, where I displayed my assembly game and spoke to secondary students about the courses on offer at SETU.</li>
+                        <li>Completed the Sunlife Horizon Programme from January to May 2024, meeting with my mentor monthly to gain valuable industry insights and participate in job shadowing opportunities.</li>
                     </ul>
                 </div>
                 <div class="details-container">
@@ -94,15 +95,16 @@
             </div>
         </div>
     </div>
-    <img src="./assets/arrow.png" alt="Arrow which takes user to next section" class="icon arrow" onclick="location.href='#experience'"/>
+    <img src="./assets/arrow.png" alt="Arrow which takes user to next section" class="icon arrow" onclick="location.href='#skills'"/>
 </section>
-    <section id="experience">
+<!--SKILLS SECTION-->
+    <section id="skills">
         <p class="section__text__p1">Explore My</p>
-        <h1 class="title">Experience</h1>
-        <div class="experience-details-container">
+        <h1 class="title">Skills</h1>
+        <div class="skills-details-container">
             <div class="about-containers">
                 <div class="details-containers">
-                    <h2 class="experience-sub-title">Frontend development</h2>
+                 
                     <div class="article-container">
                         <article>
                             <img src="./assets/checkmark.png" alt="Experience Icon" class="icon">
@@ -139,24 +141,11 @@
                         <article>
                             <img src="./assets/checkmark.png" alt="Experience Icon" class="icon">
                             <div>
-                                <h3>Assembly and C</h3>
+                                <h3>Assembly + C</h3>
                                 <p>Beginner</p>
                             </div>
                         </article>
 
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience Icon" class="icon">
-                            <div>
-                                <h3>Python</h3>
-                                <p>Beginner</p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-
-                <div class="details-containers">
-                    <h2 class="experience-sub-title">Backend development</h2>
-                    <div class="article-container">
                         <article>
                             <img src="./assets/checkmark.png" alt="Experience Icon" class="icon">
                             <div>
@@ -168,24 +157,21 @@
                         <article>
                             <img src="./assets/checkmark.png" alt="Experience Icon" class="icon">
                             <div>
-                                <h3>Node JS</h3>
-                                <p>Beginner</p>
-                            </div>
-                        </article>
-
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience Icon" class="icon">
-                            <div>
                                 <h3>Git</h3>
                                 <p>Beginner</p>
                             </div>
                         </article>
-
-                       
-
-                      
+                    
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience Icon" class="icon">
+                            <div>
+                                <h3>Power Apps</h3>
+                                <p>Beginner</p>
+                            </div>
+                        </article>
                     </div>
-            </div>
+                </div>
+
         </div>
     </div>
     <img 
@@ -193,80 +179,65 @@
         onclick="location.href='#projects'"
     />        
     </section>
+
     <!--PROJECTS SECTION-->
-    <section id="projects">
+<section id="projects">
+    <div class="projects-intro">
         <p class="section__text__p1">Explore My Recent</p>
         <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-        <div class="about-containers">
-            <!--project one-->
-            <div class="details-container color-container">
-                <div class="article-container projectImg">
-                    <img src="./assets/ev_project.png" class="image-project" alt="project 1" class="project-img"/>
-                </div>
-                <h2 class="experience-sub-title project-title">EV Charging Application - JAVA</h2>
-                <div class="btn-container">
-                    <button
-                        class="btn btn-colour-1 project-btn"
-                        onclick="location.href='https://github.com/abbimurray/project'"
-                    >Github
-                    </button>
-                    <button
-                        class="btn btn-colour-1 project-btn"
-                        onclick="location.href='https://setuo365-my.sharepoint.com/:v:/g/personal/c00260073_setu_ie/EbukI3RrN7RKu4ZLcQPfDlQB-D7_YqZ7YP1MHmzhtCd-EQ?e=yTz41i&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D'"
-                    >Live Demo
-                    </button>
-                </div>
-            </div>
-            <!--project two-->
-            <div class="details-container color-container">
-                <div class="article-container projectImg">
-                    <img src="./assets/web.png" class="image-project" alt="Car Rental Management System Project" class="project-img"/>
-                </div>
-                <h2 class="experience-sub-title project-title">Car Rental Management System</h2>
-                <div class="btn-container">
-            
-                    <button
-                        class="btn btn-colour-1 project-btn"
-                        onclick="window.open('./assets/CarRentalSystem_ProjectManual.pdf')"
-                    >Documentation
-                    </button>
-                </div>
-            </div>
-            <!--prject three-->
-            <div class="details-container color-container">
-                <div class="article-container projectImg">
-                    <img src="./assets/walking_tour.png" class="image-project" alt="Data Structures Project" class="project-img"/>
-                </div>
-                <h2 class="experience-sub-title project-title">Data Structures and Algorithms Project</h2>
-                <div class="btn-container">
-                    <button
-                        class="btn btn-colour-1 project-btn"
-                        onclick="window.open('./assets/RyanAbigailCode.pdf')"
-                    >Code
-                    </button>
-                    <button
-                        class="btn btn-colour-1 project-btn"
-                        onclick="window.open('./assets/RyanAbigailReport.pdf')"
-                    >Documentation
-                    </button>
-                </div>
-            </div>
-            </div>
+    </div>
+
+    <div class="projects-grid">
+        <!--project one-->
+        <div class="project">
+            <img src="./assets/ev_project.png" alt="project 1" class="project-img"/>
+            <h2 class="project-title">EV Charging Application - JAVA</h2>
+            <button class="btn btn-colour-1 project-btn" onclick="location.href='https://github.com/abbimurray/project'">Github</button>
+    
+            <button class="btn btn-colour-1 project-btn" onclick="location.href='https://setuo365-my.sharepoint.com/:v:/g/personal/c00260073_setu_ie/EbukI3RrN7RKu4ZLcQPfDlQB-D7_YqZ7YP1MHmzhtCd-EQ?e=yTz41i&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D'"
+                >Live Demo
+            </button>
         </div>
-        <img 
-        src="./assets/arrow.png" alt="Arrow Icon" class="icon arrow"
-        onclick="location.href='#projects'"
-    />       
-    </section>
+
+        <!--project two-->
+        <div class="project">
+            <img src="./assets/web.png" alt="Car Rental Management System Project" class="project-img"/>
+            <h2 class="project-title">Car Rental Management System</h2>
+            <button class="btn btn-colour-1 project-btn" onclick="window.open('./assets/CarRentalSystem_ProjectManual.pdf')">Documentation</button>
+        </div>
+
+        <!--project three-->
+        <div class="project">
+            <img src="./assets/walking_tour.png" alt="Data Structures Project" class="project-img"/>
+            <h2 class="project-title">Data Structures and Algorithms Project</h2>
+            <button class="btn btn-colour-1 project-btn" onclick="window.open('./assets/RyanAbigailCode.pdf')">Code</button>
+            <button
+                class="btn btn-colour-1 project-btn"
+                onclick="window.open('./assets/RyanAbigailReport.pdf')"
+            >Documentation
+            </button>
+        </div>
+
+        <!--project four-->
+        <div class="project">
+            <img src="./assets/assembly.jpg" alt="Assembly Project" class="project-img"/>
+            <h2 class="project-title">Assembly Project</h2>
+            <button class="btn btn-colour-1 project-btn" onclick="window.open('./assets/assemblyvideo.mp4')">Demo</button>
+        </div>
+    </div>
+</section>
+
+    <!--CONTACT SECTION-->
     <section id="contact">
-        <p class="section__text__p1">Get In Touch</p>
-        <h1 class="title">Contact Me</h1>
+        <!--<p class="section__text__p1">Get In Touch</p>-->
+        <h1 class="title">Get In Touch</h1>
+        <iframe src="https://app.youform.com/forms/iaw2eoaf" loading="lazy" width="100%" height="400" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+        
         <div class="contact-info-upper-container">
             <div class="contact-info-container">
                 <img src="./assets/email.png" alt="Email Icon" class="icon contact-icon email-icon"
                 />
-                <p><a href="mailto:abbimurray73@gmail.com">abbimurray73@gmail.com</a></p>
+                <p><a href="mailto:abbimurray73@gmail.com">Email me</a></p>
             </div>
             <div class="contact-info-container">
                 <img src="./assets/linkedin.png" alt="Linkedin Icon" class="icon contact-icon"
@@ -281,13 +252,13 @@
             <div class="nav-links-container">
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
-        <p> Copyright &#169; 2024 Abigail Murray. All rights reserved</p>
+        <p> Copyright &#169; 2024 Abbi M. All rights reserved</p>
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', function() {

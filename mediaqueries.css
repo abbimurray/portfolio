@@ -50,6 +50,25 @@ the desktop navbar will disappear and the hamburger nav will appear*/
         height: 250px;
         width:250px;
     }
+
+/*make skills section responsive*/
+.skills-details-container {
+    flex-direction: column;
+}
+.details-containers {
+    width: 100%;
+}
+.article-container {
+    flex-direction: column;
+    align-items: center;
+}
+.article-container article {
+    width: 100%;
+}
+
+
+
+
 }
 
 @media screen and (max-width: 600px){
@@ -109,5 +128,27 @@ the desktop navbar will disappear and the hamburger nav will appear*/
     .section__pic{
         height:200px;
         width:200px;
+    }
+
+
+
+    /*make skills section responsive*/
+    .skills-details-container {
+        flex-direction: column;
+    }
+    .details-containers {
+        width: 100%;
+    }
+    .article-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .article-container article {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .project {
+        width: 100%;
     }
 }
