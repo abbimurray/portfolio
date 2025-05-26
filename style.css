@@ -2,7 +2,7 @@
 
 /*IMPORTING GOOGLE FONT POPPINS*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -17,6 +17,16 @@ html {
     scroll-behavior: smooth;
 }
 
+html, body{
+    height:100%;
+    margin:0;
+    display:flex;
+    flex-direction: column;
+}
+main{
+    flex:1;
+}
+
 p{
     color:rgb(85,85,85)
 }
@@ -24,6 +34,23 @@ p{
 /*TRANSITIONS*/
 a, .btn{
     transition: all 300ms ease;
+}
+
+/* Skip link styling */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    background: #0078d4;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    z-index: 1000;
+    transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 10px; /* Make it visible when focused */
 }
 
 /*DESKTOP NAVBAR*/
@@ -50,14 +77,21 @@ a {
 }
 
 a:hover{
-    color:grey;
-    text-decoration: underline;
+    color:#0078d4;
+    text-decoration: underline 3px;
     text-underline-offset: 1rem;
-    text-decoration-color: rgb(181,181,181);
+    
+
+}
+/* Focus state for links */
+.navbar-links a:focus {
+    outline: 2px solid #0078d4; /* Add focus outline */
+    border-bottom: 2px solid #0078d4; /* Optional: Match hover underline */
 }
 
 .logo{
     font-size: 2rem;
+    font-family: 'Pacifico', cursive;
 }
 
 .logo:hover{
@@ -174,15 +208,14 @@ section {
     display: flex;
     width:400px;
     height: 400px;
-    margin:auto 0;
+    margin: 0;
    
 }
-
 .section__pic {
-    height: 400px;
-    width:400px;
-    border-radius: 50%; /* Make the image circular */
-    object-fit: cover; /* Ensure the image covers the element */
+    height: 320px;
+    width:350px;
+    border-radius: 50%; 
+    object-fit: cover; ;
 }
 .section__text{
     align-self: center;
@@ -206,20 +239,105 @@ section {
     font-size: 3rem;
     text-align:center;
 }
-
+/* Socials Container Styling */
 #socials-container {
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
-    gap: 1rem;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
 }
 
-/*ICONS*/   
+/* Button Styling */
+.icon-btn {
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+    transition: transform 0.2s ease-in-out;
+}
+
+.icon-btn:hover {
+    transform: scale(1.1);
+}
+.icon-btn:focus {
+    outline: 2px solid #0078d4;
+    border-radius: 4px;
+}
+
+/* Tooltip Styling */
+.tooltip {
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out;
+    white-space: nowrap;
+}
+
+.icon-btn:hover .tooltip {
+    opacity: 1;
+}
+
+/* Icon Styling */
+.icon {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.icon-btn:focus .icon {
+    outline: 2px solid #0078d4; /* Add focus outline for accessibility */
+}
+/*#socials-container {
+    display: flex;
+    justify-content: center; 
+    gap: 2rem; 
+    margin-top: 2rem; 
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
 
 .icon {
-    cursor: pointer;
-    height: 2rem;
+    width: 60px; /
+    height: 60px;
+    transition: transform 0.2s ease-in-out;
 }
+
+.icon-btn:hover .icon {
+    transform: scale(1.2);
+}*/
+
+/*#socials-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+.icon {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+}*/
+
 
 /*BUTTONS*/
 .btn-container {
@@ -515,7 +633,7 @@ article .icon{
     display:flex;
     justify-content: center;
     flex-direction: column;
-    height:80vh;
+    height:20vh;
 }
 
 .contact-info-upper-container{
@@ -551,11 +669,18 @@ article .icon{
     height:2.5rem;
 }
 
+.contact-method-label {
+    color: white; /* Set the font color to white */
+    font-weight: bold; /* Optional: Make it bold for better visibility */
+}
+/*end contact*/
+
 /*FOOTER*/
 footer{
     height:26vh
     margin 0 1rem;
 }
+
 
 footer p {
     text-align:center;
@@ -596,3 +721,275 @@ footer p {
     width:20%;
     height:50%;
 }
+
+/*contact form*/
+/* Form Container */
+#contact-form-section {
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient background */
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 50px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+/* Form Elements */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Spacing between fields */
+}
+
+#contact-form label {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Focus Effect */
+#contact-form input:focus,
+#contact-form textarea:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 5px rgba(106, 17, 203, 0.5);
+}
+
+/* Radio Buttons */
+#contact-form .form-group p {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#contact-form input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Submit Button */
+.submit-button {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 25px; /* Rounded edges */
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover Effect for Button */
+.submit-button:hover {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Footer Styling (Optional) */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #fff;
+}
+
+/* Career Section Styling */
+.career-section {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.career-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.career-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.career-content img.career-image {
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.career-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    max-width: 600px;
+    text-align: justify;
+}
+
+/*about me page*/
+/* Center and Style the About Header */
+.about-me  {
+    text-align: center; /* Center the text */
+    font-size: 2.5rem; /* Make the font size larger */
+    font-weight: bold; /* Make the text bold */
+    color: #4c6baf; /* Use a color that matches your theme */
+    margin-top: 1rem; /* Add spacing above the header */
+    margin-bottom: 1rem; /* Add spacing below the header */
+    text-transform: uppercase; /* Optional: Make the text uppercase */
+    letter-spacing: 2px; /* Add spacing between letters */
+}
+
+/* Ensure the 'Preferred Contact Method' label is white */
+.form-group p {
+    color: white; /* Set the text color to white */
+    font-weight: bold; /* Optional: Make it bold for better visibility */
+}
+/* Style the form group */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-family: Arial, sans-serif; /* Use a modern font */
+}
+
+/* Style the label */
+.form-group label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white 
+}
+
+/* Style the dropdown */
+select {
+    padding: 0.6rem 1rem; /* Add padding for a modern look */
+    font-size: 1rem; /* Adjust font size */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 8px; /* Curved edges */
+    background-color: #f9f9f9; /* Light background */
+    color: #333; /* Text color */
+    outline: none; /* Remove default outline */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    width: 100%; /* Full width */
+    max-width: 300px; /* Optional: Limit the width */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* Add hover and focus effects */
+select:hover {
+    border-color: #007BFF; /* Blue border on hover */
+}
+
+select:focus {
+    border-color: #007BFF; /* Blue border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle blue glow */
+}
+
+/* Style the placeholder option */
+select option[value=""] {
+    color: #aaa; /* Light gray for placeholder text */
+}
+
+/*CONTACT */
+/*contact page styled in cards*/
+/* General styling for the background card */
+
+/*.background-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    gap: 2rem;
+    background-color: pink;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50vh;
+}*/
+.background-card {
+    position: relative; /* Ensure it doesn't overlap other elements */
+    z-index: 1; /* Keep it below the footer */
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 1200px;
+    background-color: lightpink;
+    margin-top: 60vh;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+/* Left side container */
+/*.background-card img{
+    flex: 0 0 40%;
+    padding: 1rem; 
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}*/
+.background-card a {
+    display: inline-block;
+}
+
+
+.background-card h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.background-card p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+
+/* Form styling */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/*BOTTOM NAV*/

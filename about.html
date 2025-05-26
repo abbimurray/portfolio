@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A bit about me</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body class="about-page">
+   
+    <header>
+    <!--Top nav bar-->
+    <nav id="desktop-nav" role="navigation" aria-label="Main Navigation">
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+        <div class="logo">Abigail Murray</div>
+        <div>
+            <ul class="navbar-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    </header>
+    <!--nav-->
+    <nav id="hamburger-nav">
+        <div class="logo">Abigail Murray</div>
+        <div class="hamburger-menu">
+            <button>
+                <div class="hamburger-icon" 
+                    aria-expanded="false"
+                    aria-conrols="menu-links"
+                    onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    </button>
+           <ul id="menu-links" class="menu-links">
+                <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                <li><a href="about.html" onclick="toggleMenu()">About</a></li>
+                <li><a href="projects.html" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+<main class="about-main">
+    <h1 class="about-me">About</h1>
+    <section id="career-section" class="career-section">
+        <h2>Career</h2>
+        <div class="career-content">
+            <img src="./assets/icons/career-choice.png" alt="" class="career-image" />
+            <p>Hi, I’m Abbi — a passionate and curious software development student at SETU Carlow. I love building projects that combine creativity with logic, and I’m especially driven by a desire to make technology more accessible and impactful.<br></p>
+            <p>My journey into tech began with a fascination for how things work. I started coding as a hobby, and it quickly turned into a passion. I enjoy the challenge of problem-solving and the satisfaction of creating something from scratch.</p>
+            <p>Currently, I’m undertaking a six-month internship as part of my third year, working as a Business Applications Intern at Kildare County Council. This hands-on role is helping me further develop my technical skills while gaining real-world experience in public sector digital transformation.</p>
+        </div>
+    </section>
+ 
+    <section id="education-section" class="career-section">
+        <h2>My Education</h2>
+        <div class="education-content">
+        <img src="./assets/icons/code.png" alt="" class="education-image"/>
+        <p>I’m currently in my third year of the Software Development degree at SETU Carlow, where I’ve consistently aimed to excel both academically and practically.<br>
+            My coursework has included topics like Advanced Data Structures and Algorithms (94%), Cloud Development (88%), and Web Programming and Databases (98%).<br>
+            In Year Two, I gained experience with full-stack development, systems design, and team collaboration — notably completing a car rental management system project with a score of 93%.<br>
+            In Year One, I built a strong foundation in Java programming, networking, operating systems, and computer hardware.
+            </p>
+        </div>
+    </section>
+   
+
+    <!--images in about me-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = [
+                './assets/sunlife.jpg',
+                './assets/sunlife2.jpg',
+                './assets/unum.jpg',
+                './assets/setu.jpg'
+            ];
+            let currentIndex = 0;
+            const galleryContainer = document.querySelector('.gallery-container');
+            
+            // Create img elements for each image
+            images.forEach((src, index) => {
+                const img = document.createElement('img');
+                img.src = src;
+                if (index === 0) img.classList.add('active'); // Set the first image as active
+                galleryContainer.appendChild(img);
+            });
+    
+            const imgElements = galleryContainer.querySelectorAll('img');
+    
+            setInterval(() => {
+                imgElements[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % images.length;
+                imgElements[currentIndex].classList.add('active');
+            }, 5000); // Change image every 5 seconds
+        });
+    </script>
+
+</main>
+    
+    <footer>
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p> Copyright &#169; 2025 Abigail Murray. All rights reserved</p>
+    </footer>
+
+</body>
+
+</html>

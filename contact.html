@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact me - Abigail Murray</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css"
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+
+<body>
+    <header>
+        <nav id="desktop-nav"  aria-label="Main Navigation">
+            <a href="#main-content" class="skip-link">Skip to main content</a>
+            <div class="logo">Abigail Murray</div>
+            
+                <ul class="navbar-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+        </nav>
+    </header>
+
+    <nav id="hamburger-nav" aria-label="Mobile Navigation">
+        <div class="logo">Abigail Murray</div>
+        <div class="hamburger-menu">
+            <button
+                    class="hamburger-icon" 
+                    aria-expanded="false"
+                    aria-controls="menu-links"
+                    onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    </button>
+           <ul id="menu-links" class="menu-links" hidden>
+                <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                <li><a href="about.html" onclick="toggleMenu()">About</a></li>
+                <li><a href="projects.html" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content">
+    <section id="contact">
+        <div class="background-card">
+                <h2> Get in touch!</h2>
+                <p>Contact me through email, Linkedin or through the contact form</p>
+                    <a id="email-link">
+                        <img src="./assets/icons/mail.png" alt="Email Icon" class="icon contact-icon email-icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/abbi-m-73286420b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bbe2dYvZHS6CnkiTPlkP62A%3D%3D" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/linkedinLogo.png" alt="Linkedin Icon" class="icon contact-icon" />
+                    </a>
+        
+                <h1>Contact Me</h1>
+            <form action="submit_form.php" method="POST" id="contact-form">
+             
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        placeholder="Enter your name" 
+                        required 
+                        aria-required="true">
+                </div>
+    
+               
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="Enter your email" 
+                        required 
+                        aria-required="true">
+                </div>
+    
+           
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        name="phone" 
+                        placeholder="Enter your phone number">
+                </div>
+    
+                
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input 
+                        type="text" 
+                        id="subject" 
+                        name="subject" 
+                        placeholder="Enter the subject">
+                </div>
+    
+                
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        placeholder="Write your message here" 
+                        rows="5" 
+                        required 
+                        aria-required="true"></textarea>
+                </div>
+            
+            
+                <div class="form-group">
+                    <label for="contact_method">Preferred Contact Method:</label>
+                    <select id="contact_method" name="contact_method" required aria-required="true">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="email">Email</option>
+                        <option value="phone">Phone</option>
+                    </select>
+                </div>
+    
+        
+                <button type="submit" class="submit-button">Send</button>
+            </form>
+        </div>
+</section>
+</main>
+
+
+
+
+<footer>
+    <nav>
+        <div class="nav-links-container">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <p> Copyright &#169; 2025 Abigail Murray. All rights reserved</p>
+</footer>
+
+<script>
+    // JavaScript to dynamically generate the email link
+    const email = "abbimurray73";
+    const domain = "gmail.com";
+    const emailLink = document.getElementById("email-link");
+    const emailText = document.getElementById("email-text");
+
+    // Set the href and text content
+    emailLink.href = `mailto:${email}@${domain}`;
+    emailText.textContent = `${email}@${domain}`;
+</script>
+   
+</body>
+</html>

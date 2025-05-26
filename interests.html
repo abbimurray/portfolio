@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interests</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+
+<body>
+    <header>
+    <nav id="desktop-nav" role="navigation" aria-label="Main Navigation">
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+        <div class="logo">Abigail Murray</div>
+        <div>
+            <ul class="navbar-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    </header>
+
+    <nav id="hamburger-nav">
+        <div class="logo">Abigail Murray</div>
+        <div class="hamburger-menu">
+            <button>
+                <div class="hamburger-icon" 
+                    aria-expanded="false"
+                    aria-conrols="menu-links"
+                    onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    </button>
+           <ul id="menu-links" class="menu-links">
+                <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                <li><a href="about.html" onclick="toggleMenu()">About</a></li>
+                <li><a href="projects.html" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <h1>Projects</h1>
+       
+    </main>
+    <footer>
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p> Copyright &#169; 2025 Abigail Murray. All rights reserved</p>
+    </footer>
+</body>
+</html>
