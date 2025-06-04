@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    <link rel="stylesheet" href="navstyle.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+    <header>
+    <!--Top nav bar-->
+    <nav id="desktop-nav" role="navigation" aria-label="Main Navigation">
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+        <div class="logo">Abigail Murray</div>
+        <div>
+            <ul class="navbar-links">
+                <li><a href="construction.html">About</a></li>
+                <li><a href="construction.html">Projects</a></li>
+                <li><a href="construction.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    </header>
+
+    <!--nav-->
+    <nav id="hamburger-nav">
+        <div class="logo">Abigail Murray</div>
+        <div class="hamburger-menu">
+            <button>
+                <div class="hamburger-icon" 
+                    aria-expanded="false"
+                    aria-conrols="menu-links"
+                    onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    </button>
+           <ul id="menu-links" class="menu-links">
+                <li><a href="construction.html" onclick="toggleMenu()">About</a></li>
+                <li><a href="construction.html" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="construction.html" onclick="toggleMenu()">Contact</a></li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>
